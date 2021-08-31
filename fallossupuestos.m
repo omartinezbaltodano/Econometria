@@ -65,11 +65,7 @@ elseif supuesto == 3
     end
 elseif supuesto == 4
     betas = zeros(iter,K+1);
-    MU = zeros(N,1);subplot(2,2,2)
-hist(betas(:,2),80), hold on
-plot(beta(2), betas(:,2),'r'), ylim([0 0.05*iter]),  title({'Distribución \beta_1'}),  hold off
-sgtitle('Distribución de los Parametros Estimados por MCO') 
-
+    MU = zeros(N,1);
     V  = eye(N);
     for j=1:N
         V(j,j) = j;
